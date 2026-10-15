@@ -1,0 +1,10 @@
+# Clé du portail interne (copier depuis config/portal-secret.example.php)
+config/portal-secret.php
+
+# SMTP formulaires (copier depuis config/mail-config.example.php)
+config/mail-config.php
+
+# Dossier dupliqué imbriqué & scripts temporaires
+website/
+scratch/
+

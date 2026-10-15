@@ -1,0 +1,356 @@
+/**
+ * ==========================================================================
+ * SIP MOTION DESIGN SYSTEM — Version 1.0
+ * Architecture 100% GPU-accélérée (transform: translate3d, scale, opacity)
+ * Conçu par Agent2M selon les spécifications ergonomiques d'Agent1M
+ * ==========================================================================
+ */
+
+:root {
+    /* --- Motion Tokens --- */
+    --sip-ease-out: cubic-bezier(0.16, 1, 0.3, 1);       /* Deceleration curve (Apple / Stripe standard) */
+    --sip-ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);   /* Smooth continuous transition */
+    --sip-ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1); /* Micro-retour tactile */
+    
+    --sip-motion-instant: 100ms;
+    --sip-motion-fast: 220ms;
+    --sip-motion-normal: 450ms;
+    --sip-motion-slow: 750ms;
+    --sip-motion-cinematic: 1200ms;
+}
+
+/* ==========================================================================
+   1. HEADER — Sticky Glassmorphism & Transition au Défilement
+   ========================================================================== */
+header {
+    transition: background-color var(--sip-motion-normal) var(--sip-ease-out),
+                backdrop-filter var(--sip-motion-normal) var(--sip-ease-out),
+                box-shadow var(--sip-motion-normal) var(--sip-ease-out),
+                padding var(--sip-motion-fast) var(--sip-ease-out) !important;
+    will-change: background-color, box-shadow;
+}
+
+header.header-scrolled {
+    background: rgba(255, 255, 255, 0.94) !important;
+    backdrop-filter: blur(14px) !important;
+    -webkit-backdrop-filter: blur(14px) !important;
+    box-shadow: 0 4px 24px rgba(0, 27, 65, 0.08) !important;
+}
+
+/* Liens du menu — Glissement et réaction douce */
+.nav-menu a {
+    position: relative;
+    transition: color var(--sip-motion-fast) var(--sip-ease-out) !important;
+}
+
+.social-icons-header .social-icon {
+    transition: transform var(--sip-motion-fast) var(--sip-ease-out),
+                box-shadow var(--sip-motion-fast) var(--sip-ease-out),
+                background-color var(--sip-motion-fast) var(--sip-ease-out) !important;
+}
+
+.social-icons-header .social-icon:hover {
+    transform: translate3d(0, -2px, 0);
+    box-shadow: 0 4px 12px rgba(215, 25, 32, 0.25);
+}
+
+.social-icons-header .social-icon:active {
+    transform: translate3d(0, 0, 0) scale(0.96);
+}
+
+/* ==========================================================================
+   2. HERO SLIDER — Transitions Cinématiques & Stagger Text
+   ========================================================================== */
+.hero-slider {
+    overflow: hidden;
+}
+
+.slide {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity var(--sip-motion-slow) var(--sip-ease-out),
+                visibility var(--sip-motion-slow) var(--sip-ease-out) !important;
+    will-change: opacity;
+}
+
+.slide.active {
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+/* Micro-zoom cinématique doux sur l'image active */
+.slide img {
+    transform: scale(1) translate3d(0, 0, 0);
+    transition: transform 8s var(--sip-ease-out) !important;
+    will-change: transform;
+}
+
+.slide.active img {
+    transform: scale(1.035) translate3d(0, 0, 0);
+}
+
+/* Éléments textuels du slider : entrée cadencée (Staggered Fade-Up) */
+.slide-content h2 {
+    opacity: 0;
+    transform: translate3d(0, 22px, 0);
+    transition: opacity var(--sip-motion-normal) var(--sip-ease-out),
+                transform var(--sip-motion-normal) var(--sip-ease-out) !important;
+    will-change: opacity, transform;
+}
+
+.slide.active .slide-content h2 {
+    opacity: 1 !important;
+    transform: translate3d(0, 0, 0) !important;
+    transition-delay: 140ms !important;
+}
+
+.slide-content p {
+    opacity: 0;
+    transform: translate3d(0, 18px, 0);
+    transition: opacity var(--sip-motion-normal) var(--sip-ease-out),
+                transform var(--sip-motion-normal) var(--sip-ease-out) !important;
+    will-change: opacity, transform;
+}
+
+.slide.active .slide-content p {
+    opacity: 0.95 !important;
+    transform: translate3d(0, 0, 0) !important;
+    transition-delay: 240ms !important;
+}
+
+.slide-content .hero-cta-group {
+    opacity: 0;
+    transform: translate3d(0, 16px, 0);
+    transition: opacity var(--sip-motion-normal) var(--sip-ease-out),
+                transform var(--sip-motion-normal) var(--sip-ease-out) !important;
+    will-change: opacity, transform;
+}
+
+.slide.active .slide-content .hero-cta-group {
+    opacity: 1 !important;
+    transform: translate3d(0, 0, 0) !important;
+    transition-delay: 340ms !important;
+}
+
+.slide-content .hero-prices {
+    opacity: 0;
+    transform: translate3d(0, 18px, 0);
+    transition: opacity var(--sip-motion-normal) var(--sip-ease-out),
+                transform var(--sip-motion-normal) var(--sip-ease-out) !important;
+    will-change: opacity, transform;
+}
+
+.slide.active .slide-content .hero-prices {
+    opacity: 1 !important;
+    transform: translate3d(0, 0, 0) !important;
+    transition-delay: 220ms !important;
+}
+
+/* Indicateurs de pagination (Dots interactifs à expansion douce) */
+.slider-dots .dot {
+    width: 9px !important;
+    height: 9px !important;
+    border-radius: 9999px !important;
+    background: rgba(255, 255, 255, 0.45) !important;
+    transition: width var(--sip-motion-fast) var(--sip-ease-out),
+                background-color var(--sip-motion-fast) var(--sip-ease-out),
+                transform var(--sip-motion-fast) var(--sip-ease-out) !important;
+    cursor: pointer;
+}
+
+.slider-dots .dot:hover {
+    transform: scale(1.25);
+    background: rgba(255, 255, 255, 0.8) !important;
+}
+
+.slider-dots .dot.active {
+    width: 26px !important;
+    background: var(--sip-red, #D71920) !important;
+    box-shadow: 0 0 10px rgba(215, 25, 32, 0.5) !important;
+}
+
+/* Boutons de navigation du Slider */
+.slider-btn {
+    transition: transform var(--sip-motion-fast) var(--sip-ease-out),
+                background-color var(--sip-motion-fast) var(--sip-ease-out),
+                box-shadow var(--sip-motion-fast) var(--sip-ease-out) !important;
+}
+
+.slider-btn:hover {
+    transform: scale(1.08) !important;
+    background: rgba(11, 26, 43, 0.9) !important;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35) !important;
+}
+
+.slider-btn:active {
+    transform: scale(0.94) !important;
+}
+
+/* ==========================================================================
+   3. BANNIÈRES DES PAGES INTERNES — Révélation Immédiate Élégante
+   ========================================================================== */
+@keyframes sipPageHeaderFadeUp {
+    0% {
+        opacity: 0;
+        transform: translate3d(0, 20px, 0);
+    }
+    100% {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.page-header h1 {
+    animation: sipPageHeaderFadeUp 600ms var(--sip-ease-out) 100ms both !important;
+}
+
+.page-header p {
+    animation: sipPageHeaderFadeUp 550ms var(--sip-ease-out) 220ms both !important;
+}
+
+/* ==========================================================================
+   5. CARTES & CONTENEURS — Élévation Tactile & Micro-Zoom
+   ========================================================================== */
+.card,
+.service-card,
+.solution-card,
+.job-card,
+.partner-card,
+.station-card,
+.actualite-card,
+.rse-pillar,
+.detail-card {
+    transition: transform var(--sip-motion-fast) var(--sip-ease-out),
+                box-shadow var(--sip-motion-fast) var(--sip-ease-out),
+                border-color var(--sip-motion-fast) var(--sip-ease-out) !important;
+    will-change: transform, box-shadow;
+}
+
+.card:hover,
+.service-card:hover,
+.solution-card:hover,
+.job-card:hover,
+.partner-card:hover,
+.station-card:hover,
+.actualite-card:hover,
+.rse-pillar:hover,
+.detail-card:hover {
+    transform: translate3d(0, -5px, 0) !important;
+    box-shadow: 0 16px 36px rgba(0, 27, 65, 0.12) !important;
+}
+
+/* Micro-zoom sur l'image à l'intérieur d'une carte au survol */
+.card-image,
+.service-card .service-image,
+.about-image,
+.actualite-image {
+    overflow: hidden !important;
+}
+
+.card-image img,
+.service-image img,
+.about-image img,
+.actualite-image img {
+    transition: transform 600ms var(--sip-ease-out) !important;
+    will-change: transform;
+}
+
+.card:hover .card-image img,
+.service-card:hover .service-image img,
+.actualite-card:hover .actualite-image img {
+    transform: scale(1.04) translate3d(0, 0, 0) !important;
+}
+
+/* ==========================================================================
+   6. BOUTONS & ÉLÉMENTS D'ACTION — Rétroaction Haptique / Tactile
+   ========================================================================== */
+.btn,
+.btn-primary,
+.btn-secondary,
+.btn-devis,
+.btn-ghost-white,
+.btn-contact {
+    transition: transform var(--sip-motion-fast) var(--sip-ease-out),
+                box-shadow var(--sip-motion-fast) var(--sip-ease-out),
+                background-color var(--sip-motion-fast) var(--sip-ease-out),
+                color var(--sip-motion-fast) var(--sip-ease-out) !important;
+    will-change: transform, box-shadow;
+}
+
+.btn:hover,
+.btn-primary:hover,
+.btn-secondary:hover,
+.btn-devis:hover,
+.btn-ghost-white:hover,
+.btn-contact:hover {
+    transform: translate3d(0, -2px, 0) !important;
+}
+
+/* Sensation de clic physique (Press haptique) */
+.btn:active,
+.btn-primary:active,
+.btn-secondary:active,
+.btn-devis:active,
+.btn-ghost-white:active,
+.btn-contact:active {
+    transform: translate3d(0, 0, 0) scale(0.975) !important;
+}
+
+/* ==========================================================================
+   7. WIDGET FLOTTANT & ACCORDÉONS — Fluides et Stables
+   ========================================================================== */
+.fuel-widget {
+    transition: transform var(--sip-motion-normal) var(--sip-ease-out),
+                box-shadow var(--sip-motion-fast) var(--sip-ease-out) !important;
+    will-change: transform, box-shadow;
+}
+
+.fuel-widget:hover {
+    box-shadow: 0 12px 32px rgba(0, 27, 65, 0.22) !important;
+}
+
+.widget-toggle {
+    transition: transform var(--sip-motion-fast) var(--sip-ease-spring) !important;
+}
+
+.widget-toggle:active {
+    transform: scale(0.88) !important;
+}
+
+/* Sections 4, 8-12 (reveal, skew, logo, boutons avancés, son) => remplacées par motion-pro.css */
+
+/* ==========================================================================
+   13. ACCESSIBILITÉ UNIVERSELLE (WCAG 2.1 AAA — Safe Motion)
+   ========================================================================== */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.001ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.001ms !important;
+        scroll-behavior: auto !important;
+    }
+    
+    .slide img,
+    .slide.active img,
+    .card:hover,
+    .service-card:hover,
+    .btn:hover,
+    .btn:active,
+    .sip-velocity-skew {
+        transform: none !important;
+        transition: none !important;
+    }
+    
+    .sip-reveal,
+    .slide-content h2,
+    .slide-content p,
+    .slide-content .hero-cta-group,
+    .slide-content .hero-prices {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+    }
+}
+

@@ -1,0 +1,31 @@
+{
+  "items": [
+    {
+      "id": "flotte-distribution-2026",
+      "date": "2026-01-15",
+      "dateLabel": "15 Janvier 2026",
+      "title": "Renforcement de la flotte de distribution",
+      "excerpt": "Livraison de nouveaux camions-citernes sécurisés pour optimiser les livraisons sur la côte.",
+      "image": "assets/images/sipimg2.jpg",
+      "readMoreUrl": "contact.html"
+    },
+    {
+      "id": "programme-decarbonation",
+      "date": "2026-01-08",
+      "dateLabel": "08 Janvier 2026",
+      "title": "Programme de décarbonation",
+      "excerpt": "Mise en service d'un plan d'efficacité énergétique dans nos stations pilotes.",
+      "image": "assets/images/sipimg4.jpg",
+      "readMoreUrl": "contact.html"
+    },
+    {
+      "id": "campagne-solidarite",
+      "date": "2025-12-22",
+      "dateLabel": "22 Décembre 2025",
+      "title": "Campagne solidarité",
+      "excerpt": "Distribution de carburants et denrées de première nécessité aux communautés rurales.",
+      "image": "assets/images/sipimg3.jpg",
+      "readMoreUrl": "contact.html"
+    }
+  ]
+}

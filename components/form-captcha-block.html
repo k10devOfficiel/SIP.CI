@@ -1,0 +1,14 @@
+<!-- Fragment : bloc captcha anti-spam (contact / devis) -->
+<div class="form-group form-captcha">
+    <label for="captcha_answer">Vérification anti-spam *</label>
+    <p class="captcha-question" aria-live="polite">Chargement…</p>
+    <input type="hidden" name="captcha_token" value="">
+    <div class="captcha-row">
+        <input type="text" id="captcha_answer" name="captcha_answer" required autocomplete="off" inputmode="numeric" placeholder="Votre réponse">
+        <button type="button" class="btn btn-outline captcha-refresh">Autre question</button>
+    </div>
+</div>
+<div class="form-hp" aria-hidden="true">
+    <label for="website_hp">Ne pas remplir</label>
+    <input type="text" id="website_hp" name="website" tabindex="-1" autocomplete="off">
+</div>

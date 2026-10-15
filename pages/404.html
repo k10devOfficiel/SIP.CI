@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page non trouvée - 404 | SIP</title>
+    <link rel="stylesheet" href="../assets/css/style-improved.css">
+    <!-- Google Fonts -->
+    <!-- Google Fonts (Outfit & Plus Jakarta Sans) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <meta name="robots" content="noindex, follow">
+    <!-- Favicon Officiel & Multi-Résolutions -->
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="../assets/images/favicon-48x48.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/images/apple-touch-icon.png">
+    <link rel="manifest" href="../site.webmanifest">
+    <meta name="theme-color" content="#0A192F">
+    <!-- Nouveau style SIP -->
+    <link rel="stylesheet" href="../assets/css/style-landing-v2.css">
+    <style>
+        :root {
+            --deep-blue: #1a3a5c;
+            --sky-blue: #4a90a4;
+            --gold: #c9a227;
+            --red: #dc3545;
+            --green: #28a745;
+        }
+        
+        .error-404 {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 2rem;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+        }
+        
+        .error-404-content {
+            max-width: 600px;
+        }
+        
+        .error-404-icon {
+            font-size: 8rem;
+            margin-bottom: 1rem;
+            animation: bounce 2s infinite;
+        }
+        
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+        
+        .error-404-content h1 {
+            font-size: 10rem;
+            color: var(--deep-blue);
+            margin: 0;
+            line-height: 1;
+            font-weight: 800;
+            text-shadow: 2px 2px 0 var(--gold);
+        }
+        
+        .error-404-content h2 {
+            color: var(--red);
+            margin: 1rem 0;
+            font-size: 2rem;
+        }
+        
+        .error-404-content p {
+            color: #6c757d;
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
+        }
+        
+        .error-links {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .error-links a {
+            padding: 1rem 2rem;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .error-links .btn-primary {
+            background: var(--deep-blue);
+            color: white;
+        }
+        
+        .error-links .btn-primary:hover {
+            background: var(--sky-blue);
+        }
+        
+        .error-links .btn-secondary {
+            background: white;
+            color: var(--deep-blue);
+            border: 2px solid var(--deep-blue);
+        }
+        
+        .error-links .btn-secondary:hover {
+            background: var(--deep-blue);
+            color: white;
+        }
+        
+        .error-search {
+            margin-top: 2rem;
+            max-width: 400px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .error-search input {
+            width: 100%;
+            padding: 1rem;
+            border: 2px solid #dee2e6;
+            border-radius: 50px;
+            font-size: 1rem;
+            text-align: center;
+        }
+        
+        .error-search input:focus {
+            outline: none;
+            border-color: var(--deep-blue);
+        }
+        
+        @media (max-width: 768px) {
+            .error-404-content h1 {
+                font-size: 6rem;
+            }
+            
+            .error-404-icon {
+                font-size: 5rem;
+            }
+            
+            .error-links {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="../index.html">
+                    <img src="../assets/images/LOGOSIP2.png" alt="Logo SIP">
+                </a>
+            </div>
+            <button class="mobile-menu-toggle" aria-label="Menu mobile">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="../index.html">Accueil</a></li>
+                <li><a href="apropos.html">À Propos</a></li>
+                <li><a href="produits-services.html">Produits & Services</a></li>
+                <li><a href="stations.html">Stations</a></li>
+                <li><a href="actualites.html">Actualités</a></li>
+                <li><a href="recrutement.html">Recrutement</a></li>
+                <li><a href="contact.html" class="btn-contact">Contact</a></li>
+            </ul>
+                        <div class="social-icons-header">
+                <a href="https://fidelity.sip-ci.net/" class="social-icon" target="_blank" rel="noopener noreferrer" title="Espace client Fidelity" aria-label="Espace client — connexion Fidelity">
+                    <i class="fa-solid fa-user" aria-hidden="true"></i>
+                    <span class="social-icon-label">Espace Client</span>
+                </a>
+            </div>
+
+        </nav>
+    </header>
+
+    <main>
+        <section class="error-404">
+            <div class="error-404-content">
+                <div class="error-404-icon" style="color: var(--sip-red);"><i class="fa-solid fa-gas-pump"></i></div>
+                <h1>404</h1>
+                <h2>Oups ! Cette page n'existe pas</h2>
+                <p>La page que vous recherchez semble avoir fait le plein et est partie ailleurs. Ne vous inquiétez pas, nous vous remettons sur la bonne route !</p>
+                
+                <div class="error-links">
+                    <a href="../index.html" class="btn-primary">Retour à l'accueil</a>
+                    <a href="contact.html" class="btn-secondary">Nous contacter</a>
+                </div>
+                
+                <div class="error-search">
+                    <input type="text" placeholder="Rechercher sur le site..." id="error-search-input">
+                </div>
+                
+                <p style="margin-top: 2rem; font-size: 0.9rem;">
+                    <strong>Pages populaires :</strong><br>
+                    <a href="produits-services.html">Produits & Services</a> • 
+                    <a href="stations.html">Nos Stations</a> • 
+                    <a href="devis.html">Demander un devis</a>
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section footer-brand-col">
+                <h3>SIP - Société Ivoirienne de Pétrole</h3>
+                <a href="../index.html" class="footer-logo-link" >
+                        <img src="../assets/images/LOGOSIP2.png" alt="Logo SIP">
+                    </a>
+                <p>L'énergie au coeur de la route</p>
+                    <!-- Réseaux sociaux (Suivez-nous)
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+                        <a href="#" aria-label="LinkedIn"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+                        <a href="#" aria-label="Twitter"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/></svg></a>
+                    </div>
+                    -->
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <p><strong>Téléphone:</strong> 2721375468</p>
+                    <p><strong>Email:</strong> commercial@sip-ci.com</p>
+                    <p><strong>Adresse:</strong> Treichville, Boulevard Félix Houphouët Boigny, Immeuble La Balance</p>
+                    <p><strong>BP:</strong> 26 BP 819 Abidjan 26</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Liens utiles</h3>
+                    <ul>
+                        <li><a href="../index.html">Accueil</a></li>
+                        <li><a href="apropos.html">À propos</a></li>
+                        <li><a href="actualites.html">Actualités</a></li>
+                        <li><a href="devis.html">Demande de devis</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Stations-services</h3>
+                    <ul>
+                        <li><a href="stations.html">Trouver une station-service</a></li>
+                        <li><a href="rse.html">Nos engagements</a></li>
+                        <li><a href="produits-services.html#services-annexes">Prendre soin de votre voiture</a></li>
+                        <li><a href="contact.html?sujet=franchise">Devenir franchisé</a></li>
+                        <li><a href="recrutement.html">Rejoindre l'équipe SIP</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Société Ivoirienne de Pétrole.</p>
+            </div>
+        </div>
+    </footer>
+
+    
+    <!-- Bouton Flottant Devis Mobile -->
+    <a href="devis.html" class="floating-devis-btn">Demander un Devis</a>
+    
+    
+    
+    <!-- Bandeau Cookies RGPD -->
+    <div class="cookies-banner">
+        <p>Nous utilisons des cookies pour améliorer votre expérience. En continuant à naviguer, vous acceptez notre <a href="confidentialite.html">politique de confidentialité</a>.</p>
+        <div class="cookies-buttons">
+            <button class="cookies-btn cookies-btn-accept">Accepter</button>
+            <button class="cookies-btn cookies-btn-reject">Refuser</button>
+        </div>
+    </div>
+
+    <script src="../assets/js/script.js"></script>
+    <script src="../assets/js/widget.js"></script>
+
+    <!-- Menu Mobile HTML -->
+    <div class="mobile-menu">
+        <a href="../index.html">Accueil</a>
+        <a href="apropos.html">À Propos</a>
+        <a href="produits-services.html">Produits & Services</a>
+        <a href="stations.html">Stations</a>
+        <a href="actualites.html">Actualités</a>
+        <a href="recrutement.html">Recrutement</a>
+        <a href="contact.html">Contact</a>
+        <a href="https://fidelity.sip-ci.net/" class="mobile-menu-espace-client" target="_blank" rel="noopener noreferrer">Espace client</a>
+    </div>
+</body>
+</html>

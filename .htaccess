@@ -1,0 +1,34 @@
+# -----------------------------------------------------------------------------
+# À lire avant de modifier :
+#
+# Sans ce fichier : la plupart des visiteurs arrivent en http://sip-ci.com —
+# aucune vérification de certificat sur HTTP, donc pas d’avertissement « connexion pas privée ».
+#
+# Avec redirection HTTPS ci-dessous : le navigateur ouvre TLS sur le port 443 et vérifie le
+# certificat. Si celui présenté par votre serveur (réel ou CDN) est invalide, vous voyez une erreur —
+# même si vous avez « installé un certificat » (mauvais vhost, chaîne manquante, mauvais domaine dans le SAN…).
+#
+# SECOURS tant que votre hébergeur corrige TLS : renommez ce fichier .htaccess en .htaccess.off
+# (le site sera de nouveau joignable en HTTP comme avant ; à remettre dès HTTPS OK).
+#
+# Tester le certificat : https://www.ssllabs.com/ssltest/analyze.html?d=sip-ci.com
+# -----------------------------------------------------------------------------
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # Conserver HTTP en développement local (MAMP / sans certificat)
+    RewriteCond %{HTTP_HOST} ^(localhost|127\.0\.0\.1)(:\d+)?$ [NC]
+    RewriteRule ^ - [L]
+
+    # Canonique : tout le trafic www → https://sip-ci.com (apex)
+    RewriteCond %{HTTP_HOST} ^www\.sip-ci\.com$ [NC]
+    RewriteRule ^ https://sip-ci.com%{REQUEST_URI} [L,R=301]
+
+    # HTTP → HTTPS (conserve le nom d’hôte pour sous-domaines / préproduction hors www.)
+    RewriteCond %{HTTPS} !=on [NC]
+    RewriteCond %{HTTP:X-Forwarded-Proto} !^https$ [NC]
+    RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+</IfModule>
+
+# Après TLS vérifié OK (SSL Labs note A ou au moins certificat sans erreur) :
+# envisager Strict-Transport-Security côté serveur ou CDN.

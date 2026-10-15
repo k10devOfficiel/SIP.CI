@@ -1,0 +1,11 @@
+# Robots.txt pour la Société Ivoirienne de Pétrole (SIP)
+# https://sip-ci.com/
+
+User-agent: *
+Allow: /
+Disallow: /scratch/
+Disallow: /tools/
+Disallow: /.agents/
+
+# Plan du site (Sitemap XML)
+Sitemap: https://sip-ci.com/sitemap.xml

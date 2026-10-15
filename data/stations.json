@@ -1,0 +1,186 @@
+{
+  "stations": [
+    {
+      "id": 1,
+      "sortOrder": 1,
+      "name": "Station SIP Bonoua",
+      "address": "Route Grand-Bassam, Bonoua",
+      "city": "",
+      "coordinates": {
+        "lat": 5.2729,
+        "lng": -3.5967
+      },
+      "phone": "+225 20 22 33 48",
+      "services": [
+        "Carburants",
+        "Lavage",
+        "Boutique"
+      ],
+      "image": "sipimg.jpg",
+      "mediaType": "map",
+      "featured": false,
+      "status": "active"
+    },
+    {
+      "id": 2,
+      "sortOrder": 2,
+      "name": "Station SIP Andé",
+      "address": "Avenue Principale, Andé",
+      "city": "",
+      "coordinates": {
+        "lat": 5.232,
+        "lng": -4.35
+      },
+      "phone": "+225 20 22 33 49",
+      "services": [
+        "Carburants",
+        "Lavage",
+        "Restauration"
+      ],
+      "image": "sipimg2.jpg",
+      "mediaType": "map",
+      "featured": false,
+      "status": "active"
+    },
+    {
+      "id": 3,
+      "sortOrder": 3,
+      "name": "Station SIP Angovia",
+      "address": "Route de Yamoussoukro, Angovia",
+      "city": "",
+      "coordinates": {
+        "lat": 6.58,
+        "lng": -5.02
+      },
+      "phone": "+225 20 22 33 50",
+      "services": [
+        "Carburants",
+        "Boutique",
+        "Lubrifiants"
+      ],
+      "image": "sipimg3.jpg",
+      "mediaType": "map",
+      "featured": false,
+      "status": "active"
+    },
+    {
+      "id": 4,
+      "sortOrder": 4,
+      "name": "Station SIP Yopougon Cité ADO",
+      "address": "Cité ADO, Yopougon",
+      "city": "",
+      "coordinates": {
+        "lat": 5.3487,
+        "lng": -4.0789
+      },
+      "phone": "+225 20 22 33 51",
+      "services": [
+        "Carburants",
+        "Lavage",
+        "Boutique"
+      ],
+      "image": "sipimg4.jpg",
+      "mediaType": "map",
+      "featured": false,
+      "status": "active"
+    },
+    {
+      "id": 5,
+      "sortOrder": 5,
+      "name": "Station SIP Vridi Hino",
+      "address": "Zone Industrielle, Vridi",
+      "city": "",
+      "coordinates": {
+        "lat": 5.2947,
+        "lng": -3.9578
+      },
+      "phone": "+225 20 22 33 52",
+      "services": [
+        "Carburants",
+        "Lavage",
+        "Lubrifiants",
+        "Restauration"
+      ],
+      "image": "sipimg5.jpg",
+      "mediaType": "map",
+      "featured": false,
+      "status": "active"
+    },
+    {
+      "id": 6,
+      "sortOrder": 6,
+      "name": "Station SIP Diekolilie",
+      "address": "Route d'Abengourou, Djekolilie",
+      "city": "",
+      "coordinates": {
+        "lat": 6.737,
+        "lng": -3.483
+      },
+      "phone": "+225 20 22 33 53",
+      "services": [
+        "Carburants",
+        "Boutique",
+        "Lavage"
+      ],
+      "image": "slide1.png",
+      "mediaType": "map",
+      "featured": false,
+      "status": "active"
+    },
+    {
+      "id": 7,
+      "sortOrder": 7,
+      "name": "Station SIP Zégata",
+      "address": "Zégata",
+      "city": "",
+      "coordinates": {
+        "lat": 7.555,
+        "lng": -6.053
+      },
+      "phone": "+225 20 22 33 44",
+      "services": [
+        "Carburants",
+        "Lavage",
+        "Boutique"
+      ],
+      "image": "slide2.png",
+      "mediaType": "map",
+      "featured": false,
+      "status": "active"
+    }
+  ],
+  "regions": [
+    "Abidjan",
+    "Bonoua",
+    "Grand-Bassam",
+    "Yopougon",
+    "Vallée du Bandama",
+    "Bas-Sassandra",
+    "Savanes",
+    "Lacs",
+    "Montagnes",
+    "Sassandra-Marahoué",
+    "Woroba",
+    "Denguélé",
+    "Zanzan"
+  ],
+  "cities": [
+    "Bonoua",
+    "Andé",
+    "Angovia",
+    "Yopougon",
+    "Vridi",
+    "Djekolilie",
+    "Zégata",
+    "Abidjan",
+    "Bouaké",
+    "San Pedro",
+    "Korhogo",
+    "Daloa",
+    "Yamoussoukro",
+    "Soubré",
+    "Gagnoa",
+    "Man",
+    "Odienné"
+  ]
+}

@@ -1,0 +1,535 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Partenaires Institutionnels & Industriels | SIP Côte d'Ivoire</title>
+
+    <!-- SEO Meta Tags Primordiaux (Mots-clés Pétrole, Carburants, Stations CI) -->
+    <meta name="description" content="Nos partenaires stratégiques, institutions de régulation, banques et flottes industrielles qui font confiance à la Société Ivoirienne de Pétrole pour leur approvisionnement énergétique.">
+    <meta name="keywords" content="partenaires SIP, distributeur pétrolier agréé Côte d'Ivoire, réseau partenaires énergie">
+    <meta name="author" content="Société Ivoirienne de Pétrole (SIP)">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <link rel="canonical" href="https://sip-ci.com/pages/partenaires.html">
+
+    <!-- Balises Open Graph / WhatsApp / Facebook -->
+    <meta property="og:locale" content="fr_CI">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Partenaires Institutionnels & Industriels | SIP Côte d'Ivoire">
+    <meta property="og:description" content="Nos partenaires stratégiques, institutions de régulation, banques et flottes industrielles qui font confiance à la Société Ivoirienne de Pétrole pour leur approvisionnement énergétique.">
+    <meta property="og:url" content="https://sip-ci.com/pages/partenaires.html">
+    <meta property="og:site_name" content="SIP - Société Ivoirienne de Pétrole">
+    <meta property="og:image" content="https://sip-ci.com/assets/images/LOGOSIP2.png">
+    <meta property="og:image:width" content="514">
+    <meta property="og:image:height" content="383">
+    <meta property="og:image:alt" content="Logo officiel Société Ivoirienne de Pétrole">
+
+    <!-- Balises Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Partenaires Institutionnels & Industriels | SIP Côte d'Ivoire">
+    <meta name="twitter:description" content="Nos partenaires stratégiques, institutions de régulation, banques et flottes industrielles qui font confiance à la Société Ivoirienne de Pétrole pour leur approvisionnement énergétique.">
+    <meta name="twitter:image" content="https://sip-ci.com/assets/images/LOGOSIP2.png">
+
+    <!-- Favicon Officiel & Multi-Résolutions Google Search -->
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="../assets/images/favicon-48x48.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/images/apple-touch-icon.png">
+    <link rel="manifest" href="../site.webmanifest">
+    <meta name="theme-color" content="#0A192F">
+    <meta name="msapplication-TileColor" content="#0A192F">
+
+    <link rel="stylesheet" href="../assets/css/style-improved.css">
+    <!-- Google Fonts -->
+    <!-- Google Fonts (Outfit & Plus Jakarta Sans) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- Nouveau style SIP -->
+    <link rel="stylesheet" href="../assets/css/style-landing-v2.css">
+    <style>
+        .partners-hero {
+            background: linear-gradient(135deg, var(--deep-blue) 0%, var(--sky-blue) 100%);
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+        }
+        
+        .partners-hero h1 {
+            color: white;
+            margin-bottom: 1rem;
+        }
+        
+        .partners-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            max-width: 800px;
+            margin: 3rem auto 0;
+        }
+        
+        .partner-stat {
+            text-align: center;
+        }
+        
+        .partner-stat .number {
+            font-size: 3rem;
+            font-weight: 800;
+            color: var(--gold);
+        }
+        
+        .partner-stat .label {
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+        
+        .partners-section {
+            padding: 4rem 0;
+        }
+        
+        .partners-section:nth-child(even) {
+            background: #f8f9fa;
+        }
+        
+        .partners-section h2 {
+            text-align: center;
+            color: var(--deep-blue);
+            margin-bottom: 3rem;
+        }
+        
+        .partners-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            align-items: center;
+            justify-items: center;
+        }
+        
+        .partner-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            width: 100%;
+            max-width: 250px;
+        }
+        
+        .partner-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+        
+        .partner-card img {
+            max-width: 120px;
+            height: 80px;
+            object-fit: contain;
+            filter: grayscale(100%);
+            opacity: 0.7;
+            transition: all 0.3s ease;
+        }
+        
+        .partner-card:hover img {
+            filter: grayscale(0%);
+            opacity: 1;
+        }
+        
+        .partner-card h4 {
+            margin-top: 1rem;
+            color: var(--deep-blue);
+            font-size: 1.1rem;
+        }
+        
+        .partner-card p {
+            color: #6c757d;
+            font-size: 0.9rem;
+            margin-top: 0.5rem;
+        }
+        
+        .testimonials-section {
+            padding: 4rem 0;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+        }
+        
+        .testimonials-section h2 {
+            text-align: center;
+            color: var(--deep-blue);
+            margin-bottom: 3rem;
+        }
+        
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .testimonial-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            position: relative;
+        }
+        
+        .testimonial-card::before {
+            content: '"';
+            font-size: 4rem;
+            color: var(--gold);
+            position: absolute;
+            top: 10px;
+            left: 20px;
+            font-family: Georgia, serif;
+            line-height: 1;
+        }
+        
+        .testimonial-text {
+            font-style: italic;
+            color: #495057;
+            margin-bottom: 1.5rem;
+            padding-top: 1rem;
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .testimonial-author img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        
+        .testimonial-author-info h4 {
+            color: var(--deep-blue);
+            margin: 0;
+            font-size: 1rem;
+        }
+        
+        .testimonial-author-info p {
+            color: #6c757d;
+            margin: 0;
+            font-size: 0.85rem;
+        }
+        
+        .become-partner {
+            background: var(--deep-blue);
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+        }
+        
+        .become-partner h2 {
+            color: white;
+            margin-bottom: 1rem;
+        }
+        
+        .become-partner p {
+            max-width: 600px;
+            margin: 0 auto 2rem;
+            opacity: 0.9;
+        }
+        
+        .become-partner .btn {
+            background: var(--gold);
+            color: var(--deep-blue);
+            padding: 1rem 2rem;
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+        
+        @media (max-width: 768px) {
+            .partners-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .partner-card {
+                padding: 1.5rem;
+            }
+            
+            .partner-stat .number {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="../index.html">
+                    <img src="../assets/images/LOGOSIP2.png" alt="Logo SIP">
+                </a>
+            </div>
+            <button class="mobile-menu-toggle" aria-label="Menu mobile">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="../index.html">Accueil</a></li>
+                <li><a href="apropos.html">À Propos</a></li>
+                <li><a href="produits-services.html">Produits & Services</a></li>
+                <li><a href="stations.html">Stations</a></li>
+                <li><a href="actualites.html">Actualités</a></li>
+                <li><a href="recrutement.html">Recrutement</a></li>
+                <li><a href="contact.html" class="btn-contact">Contact</a></li>
+            </ul>
+                        <div class="social-icons-header">
+                <a href="https://fidelity.sip-ci.net/" class="social-icon" target="_blank" rel="noopener noreferrer" title="Espace client Fidelity" aria-label="Espace client — connexion Fidelity">
+                    <i class="fa-solid fa-user" aria-hidden="true"></i>
+                    <span class="social-icon-label">Espace Client</span>
+                </a>
+            </div>
+
+        </nav>
+    </header>
+
+    <main>
+        <section class="partners-hero">
+            <div class="container">
+                <h1>Nos Partenaires & Clients</h1>
+                <p>Ils nous font confiance pour leurs besoins énergétiques</p>
+                
+                <div class="partners-stats">
+                    <div class="partner-stat">
+                        <div class="number">500+</div>
+                        <div class="label">Entreprises Clientes</div>
+                    </div>
+                    <div class="partner-stat">
+                        <div class="number">50+</div>
+                        <div class="label">Partenaires Stratégiques</div>
+                    </div>
+                    <div class="partner-stat">
+                        <div class="number">25</div>
+                        <div class="label">Années d'Expérience</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="partners-section">
+            <div class="container">
+                <h2>Grandes Entreprises & Industries</h2>
+                <div class="partners-grid">
+                    <div class="partner-card">
+                        <img src="../assets/images/partner-placeholder.png" alt="SOTRA">
+                        <h4>SOTRA</h4>
+                        <p>Transport en commun</p>
+                    </div>
+                    <div class="partner-card">
+                        <img src="../assets/images/partner-placeholder.png" alt="SOTRA">
+                        <h4>SOTRA</h4>
+                        <p>Transport urbain</p>
+                    </div>
+                    <div class="partner-card">
+                        <img src="../assets/images/partner-placeholder.png" alt="CMA CGM">
+                        <h4>CMA CGM</h4>
+                        <p>Transport maritime</p>
+                    </div>
+                    <div class="partner-card">
+                        <img src="../assets/images/partner-placeholder.png" alt="MOOV">
+                        <h4>MOOV Africa</h4>
+                        <p>Télécommunications</p>
+                    </div>
+                    <div class="partner-card">
+                        <img src="../assets/images/partner-placeholder.png" alt="Orange">
+                        <h4>Orange CI</h4>
+                        <p>Télécommunications</p>
+                    </div>
+                    <div class="partner-card">
+                        <img src="../assets/images/partner-placeholder.png" alt="MTN">
+                        <h4>MTN Côte d'Ivoire</h4>
+                        <p>Télécommunications</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="partners-section">
+            <div class="container">
+                <h2>Secteur BTP & Construction</h2>
+                <div class="partners-grid">
+                    <div class="partner-card">
+                        <img src="../assets/images/partner-placeholder.png" alt="SOTRA">
+                        <h4>SAGECO</h4>
+                        <p>BTP & Génie Civil</p>
+                    </div>
+                    <div class="partner-card">
+                        <img src="../assets/images/partner-placeholder.png" alt="SOTRA">
+                        <h4>GBG</h4>
+                        <p>Construction</p>
+                    </div>
+                    <div class="partner-card">
+                        <img src="../assets/images/partner-placeholder.png" alt="SOTRA">
+                        <h4>ECO-Construction</h4>
+                        <p>Bâtiment</p>
+                    </div>
+                    <div class="partner-card">
+                        <img src="../assets/images/partner-placeholder.png" alt="SOTRA">
+                        <h4>AIB</h4>
+                        <p>Infrastructures</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="partners-section">
+            <div class="container">
+                <h2>Transport & Logistique</h2>
+                <div class="partners-grid">
+                    <div class="partner-card">
+                        <img src="../assets/images/partner-placeholder.png" alt="SOTRA">
+                        <h4>STC</h4>
+                        <p>Transport de marchandises</p>
+                    </div>
+                    <div class="partner-card">
+                        <img src="../assets/images/partner-placeholder.png" alt="SOTRA">
+                        <h4>Abidjan Terminal</h4>
+                        <p>Portuaire</p>
+                    </div>
+                    <div class="partner-card">
+                        <img src="../assets/images/partner-placeholder.png" alt="SOTRA">
+                        <h4>SOTRA</h4>
+                        <p>Transport public</p>
+                    </div>
+                    <div class="partner-card">
+                        <img src="../assets/images/partner-placeholder.png" alt="SOTRA">
+                        <h4>Air Côte d'Ivoire</h4>
+                        <p>Transport aérien</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="testimonials-section">
+            <div class="container">
+                <h2>Ils témoignent de leur collaboration</h2>
+                <div class="testimonials-grid">
+                    <div class="testimonial-card">
+                        <p class="testimonial-text">SIP nous accompagne depuis plus de 10 ans dans l'approvisionnement en carburant de notre flotte de bus. Leur fiabilité et leur réactivité sont essentielles pour nos opérations quotidiennes.</p>
+                        <div class="testimonial-author">
+                            <div class="testimonial-author-info">
+                                <h4>Directeur des Opérations</h4>
+                                <p>SOTRA - Transport en commun</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <p class="testimonial-text">La livraison de gaz pour nos chantiers est toujours ponctuelle. L'équipe commerciale est à l'écoute et propose des solutions adaptées à nos besoins spécifiques en BTP.</p>
+                        <div class="testimonial-author">
+                            <div class="testimonial-author-info">
+                                <h4>Responsable Logistique</h4>
+                                <p>Grand Groupe BTP</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <p class="testimonial-text">La qualité des lubrifiants SIP a permis d'améliorer la performance de nos moteurs et de réduire nos coûts de maintenance. Un partenaire fiable et professionnel.</p>
+                        <div class="testimonial-author">
+                            <div class="testimonial-author-info">
+                                <h4>Chef de Parc</h4>
+                                <p>Entreprise de Transport</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="become-partner">
+            <div class="container">
+                <h2>Devenez Partenaire SIP</h2>
+                <p>Rejoignez notre réseau de partenaires et bénéficiez de conditions préférentielles, d'un service dédié et d'une expertise reconnue dans le domaine des hydrocarbures en Côte d'Ivoire.</p>
+                <a href="devis.html" class="btn">Devenir Partenaire →</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section footer-brand-col">
+                <h3>SIP - Société Ivoirienne de Pétrole</h3>
+                <a href="../index.html" class="footer-logo-link" >
+                        <img src="../assets/images/LOGOSIP2.png" alt="Logo SIP">
+                    </a>
+                <p>L'énergie au coeur de la route</p>
+                    <!-- Réseaux sociaux (Suivez-nous)
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+                        <a href="#" aria-label="LinkedIn"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+                        <a href="#" aria-label="Twitter"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/></svg></a>
+                    </div>
+                    -->
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <p><strong>Téléphone:</strong> 2721375468</p>
+                    <p><strong>Email:</strong> commercial@sip-ci.com</p>
+                    <p><strong>Adresse:</strong> Treichville, Boulevard Félix Houphouët Boigny, Immeuble La Balance</p>
+                    <p><strong>BP:</strong> 26 BP 819 Abidjan 26</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Liens utiles</h3>
+                    <ul>
+                        <li><a href="../index.html">Accueil</a></li>
+                        <li><a href="apropos.html">À propos</a></li>
+                        <li><a href="actualites.html">Actualités</a></li>
+                        <li><a href="devis.html">Demande de devis</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Stations-services</h3>
+                    <ul>
+                        <li><a href="stations.html">Trouver une station-service</a></li>
+                        <li><a href="rse.html">Nos engagements</a></li>
+                        <li><a href="produits-services.html#services-annexes">Prendre soin de votre voiture</a></li>
+                        <li><a href="contact.html?sujet=franchise">Devenir franchisé</a></li>
+                        <li><a href="recrutement.html">Rejoindre l'équipe SIP</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Société Ivoirienne de Pétrole.</p>
+            </div>
+        </div>
+    </footer>
+
+    
+    
+    
+    <!-- Bandeau Cookies RGPD -->
+    <div class="cookies-banner">
+        <p>Nous utilisons des cookies pour améliorer votre expérience. En continuant à naviguer, vous acceptez notre <a href="confidentialite.html">politique de confidentialité</a>.</p>
+        <div class="cookies-buttons">
+            <button class="cookies-btn cookies-btn-accept">Accepter</button>
+            <button class="cookies-btn cookies-btn-reject">Refuser</button>
+        </div>
+    </div>
+
+    <script src="../assets/js/script.js"></script>
+    <script src="../assets/js/widget.js"></script>
+
+    <!-- Menu Mobile HTML -->
+    <div class="mobile-menu">
+        <a href="../index.html">Accueil</a>
+        <a href="apropos.html">À Propos</a>
+        <a href="produits-services.html">Produits & Services</a>
+        <a href="stations.html">Stations</a>
+        <a href="actualites.html">Actualités</a>
+        <a href="recrutement.html">Recrutement</a>
+        <a href="contact.html">Contact</a>
+        <a href="https://fidelity.sip-ci.net/" class="mobile-menu-espace-client" target="_blank" rel="noopener noreferrer">Espace client</a>
+    </div>
+</body>
+</html>

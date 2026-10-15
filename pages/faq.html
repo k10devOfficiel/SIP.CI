@@ -1,0 +1,405 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foire Aux Questions (FAQ) Pétrole & Carburants | SIP Côte d'Ivoire</title>
+
+    <!-- SEO Meta Tags Primordiaux (Mots-clés Pétrole, Carburants, Stations CI) -->
+    <meta name="description" content="Toutes les réponses à vos questions sur les carburants SIP, les cartes carburant, la facturation des entreprises, la sécurité des stations et la qualité de nos produits.">
+    <meta name="keywords" content="questions carburant Côte d'Ivoire, FAQ SIP, carte carburant fonctionnement, qualité essence gasoil">
+    <meta name="author" content="Société Ivoirienne de Pétrole (SIP)">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <link rel="canonical" href="https://sip-ci.com/pages/faq.html">
+
+    <!-- Balises Open Graph / WhatsApp / Facebook -->
+    <meta property="og:locale" content="fr_CI">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Foire Aux Questions (FAQ) Pétrole & Carburants | SIP Côte d'Ivoire">
+    <meta property="og:description" content="Toutes les réponses à vos questions sur les carburants SIP, les cartes carburant, la facturation des entreprises, la sécurité des stations et la qualité de nos produits.">
+    <meta property="og:url" content="https://sip-ci.com/pages/faq.html">
+    <meta property="og:site_name" content="SIP - Société Ivoirienne de Pétrole">
+    <meta property="og:image" content="https://sip-ci.com/assets/images/LOGOSIP2.png">
+    <meta property="og:image:width" content="514">
+    <meta property="og:image:height" content="383">
+    <meta property="og:image:alt" content="Logo officiel Société Ivoirienne de Pétrole">
+
+    <!-- Balises Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Foire Aux Questions (FAQ) Pétrole & Carburants | SIP Côte d'Ivoire">
+    <meta name="twitter:description" content="Toutes les réponses à vos questions sur les carburants SIP, les cartes carburant, la facturation des entreprises, la sécurité des stations et la qualité de nos produits.">
+    <meta name="twitter:image" content="https://sip-ci.com/assets/images/LOGOSIP2.png">
+
+    <!-- Favicon Officiel & Multi-Résolutions Google Search -->
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="../assets/images/favicon-48x48.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/images/apple-touch-icon.png">
+    <link rel="manifest" href="../site.webmanifest">
+    <meta name="theme-color" content="#0A192F">
+    <meta name="msapplication-TileColor" content="#0A192F">
+
+    <link rel="stylesheet" href="../assets/css/style-improved.css">
+    <!-- Google Fonts -->
+    <!-- Google Fonts (Outfit & Plus Jakarta Sans) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- Nouveau style SIP -->
+    <link rel="stylesheet" href="../assets/css/style-landing-v2.css">
+    
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="../index.html">
+                    <img src="../assets/images/LOGOSIP2.png" alt="Logo officiel SIP - Société Ivoirienne de Pétrole">
+                </a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="../index.html">Accueil</a></li>
+                <li><a href="apropos.html">À Propos</a></li>
+                <li><a href="produits-services.html">Produits & Services</a></li>
+                <li><a href="stations.html">Stations</a></li>
+                <li><a href="actualites.html">Actualités</a></li>
+                <li><a href="recrutement.html">Recrutement</a></li>
+                <li><a href="contact.html" class="btn-contact">Contact</a></li>
+            </ul>
+            <div class="social-icons-header">
+                <a href="https://fidelity.sip-ci.net/" class="social-icon" target="_blank" rel="noopener noreferrer" title="Espace client Fidelity" aria-label="Espace client — connexion Fidelity">
+                    <i class="fa-solid fa-user" aria-hidden="true"></i>
+                    <span class="social-icon-label">Espace Client</span>
+                </a>
+            </div>
+            <button class="mobile-menu-toggle" aria-label="Menu mobile">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-hero">
+            <div class="container">
+                <h1>Questions Fréquentes</h1>
+                <p>Trouvez rapidement les réponses à vos questions</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="faq-search">
+                    <input type="text" id="faq-search" placeholder="Rechercher une question..." aria-label="Rechercher dans la FAQ">
+                    <button class="btn btn-primary" onclick="searchFAQ()"><i class="fa-solid fa-magnifying-glass" style="margin-right: 0.4rem;"></i> Rechercher</button>
+                </div>
+
+                <div class="faq-categories">
+                    <button class="faq-category-btn active" data-category="all"><i class="fa-solid fa-layer-group" style="margin-right: 0.4rem;"></i> Toutes</button>
+                    <button class="faq-category-btn" data-category="produits"><i class="fa-solid fa-gas-pump" style="margin-right: 0.4rem;"></i> Produits</button>
+                    <button class="faq-category-btn" data-category="stations"><i class="fa-solid fa-location-dot" style="margin-right: 0.4rem;"></i> Stations</button>
+                    <button class="faq-category-btn" data-category="livraison"><i class="fa-solid fa-truck-fast" style="margin-right: 0.4rem;"></i> Livraison</button>
+                    <button class="faq-category-btn" data-category="paiement"><i class="fa-solid fa-credit-card" style="margin-right: 0.4rem;"></i> Paiement</button>
+                    <button class="faq-category-btn" data-category="fidelite"><i class="fa-solid fa-star" style="margin-right: 0.4rem;"></i> Fidélité</button>
+                </div>
+
+                <div class="faq-container faq-accordion">
+                    <h2>Produits et Carburants</h2>
+                    
+                    <div class="faq-item" data-category="produits">
+                        <div class="faq-question">
+                            <span>Quelle est la différence entre le Super et le Gasoil ?</span>
+                            <i class="fa-solid fa-chevron-down faq-chevron"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Le <strong>Super</strong> (essence) est un carburant destiné aux moteurs essence, tandis que le <strong>Gasoil</strong> (diesel) est utilisé pour les moteurs diesel. Chaque véhicule nécessite le carburant adapté à son type de moteur. Consultez votre manuel d'utilisation pour connaître le carburant recommandé.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item" data-category="produits">
+                        <div class="faq-question">
+                            <span>Quelle est la qualité des carburants SIP ?</span>
+                            <i class="fa-solid fa-chevron-down faq-chevron"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Tous nos carburants respectent strictement les normes ivoiriennes et internationales de qualité. Nos produits sont régulièrement testés en laboratoire pour garantir leur pureté et leurs performances optimales. SIP est certifiée selon les normes ISO et contrôlée par les autorités compétentes.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item" data-category="produits">
+                        <div class="faq-question">
+                            <span>Proposez-vous du carburant sans plomb ?</span>
+                            <i class="fa-solid fa-chevron-down faq-chevron"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Oui, tous nos carburants essence (Super) sont sans plomb depuis plusieurs années, conformément aux réglementations environnementales en vigueur. Cela permet de réduire les émissions polluantes et de protéger les moteurs modernes.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item" data-category="produits">
+                        <div class="faq-question">
+                            <span>Quels lubrifiants proposez-vous ?</span>
+                            <i class="fa-solid fa-chevron-down faq-chevron"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Nous proposons une gamme complète de lubrifiants pour tous types de véhicules et machines : huiles moteur, huiles de transmission, graisses, liquides de refroidissement et liquides de frein. Nos lubrifiants sont disponibles dans toutes nos stations et sur commande pour les professionnels.</p>
+                        </div>
+                    </div>
+
+                    <h2>Nos Stations</h2>
+
+                    <div class="faq-item" data-category="stations">
+                        <div class="faq-question">
+                            <span>Où trouver une station SIP près de chez moi ?</span>
+                            <i class="fa-solid fa-chevron-down faq-chevron"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Consultez notre page <a href="stations.html">Nos Stations</a> pour trouver la station la plus proche de chez vous. Vous pouvez également nous appeler au 2721375468 ou utiliser notre carte interactive pour localiser les stations dans votre région.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item" data-category="stations">
+                        <div class="faq-question">
+                            <span>Quels sont les horaires d'ouverture des stations ?</span>
+                            <i class="fa-solid fa-chevron-down faq-chevron"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>La plupart de nos stations sont ouvertes 7j/7 et 24h/24. Certaines stations en zone rurale peuvent avoir des horaires adaptés aux besoins locaux. Consultez la fiche de chaque station sur notre site pour connaître ses horaires précis.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item" data-category="stations">
+                        <div class="faq-question">
+                            <span>Les stations acceptent-elles les cartes bancaires ?</span>
+                            <i class="fa-solid fa-chevron-down faq-chevron"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Oui, toutes nos stations acceptent les paiements par carte bancaire, mobile money (Orange Money, MTN Money, Wave, etc.) et espèces. Nous proposons également notre carte de fidélité SIP pour des avantages exclusifs.</p>
+                        </div>
+                    </div>
+
+                    <h2>Livraison et Services</h2>
+
+                    <div class="faq-item" data-category="livraison">
+                        <div class="faq-question">
+                            <span>Faites-vous des livraisons de carburant ?</span>
+                            <i class="fa-solid fa-chevron-down faq-chevron"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Oui, nous assurons la livraison de carburants et de gaz pour les professionnels (entreprises, chantiers, industries). Contactez notre service commercial au 2721375468 ou demandez un devis en ligne pour organiser votre livraison.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item" data-category="livraison">
+                        <div class="faq-question">
+                            <span>Quel est le délai de livraison pour les commandes ?</span>
+                            <i class="fa-solid fa-chevron-down faq-chevron"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Le délai de livraison dépend de votre localisation et du volume commandé. En général, nous livrons sous 24 à 48 heures ouvrables dans la région d'Abidjan et sous 72 heures pour les autres régions. Pour les commandes urgentes, contactez notre hotline 24h/24.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item" data-category="livraison">
+                        <div class="faq-question">
+                            <span>Livrez-vous le gaz butane et propane ?</span>
+                            <i class="fa-solid fa-chevron-down faq-chevron"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Oui, nous livrons des bonbonnes et citernes de gaz butane et propane pour particuliers et professionnels. Nous proposons également des solutions de stockage et d'installation pour les entreprises et industries.</p>
+                        </div>
+                    </div>
+
+                    <h2>Paiement et Tarifs</h2>
+
+                    <div class="faq-item" data-category="paiement">
+                        <div class="faq-question">
+                            <span>Les prix sont-ils fixes ou variables ?</span>
+                            <i class="fa-solid fa-chevron-down faq-chevron"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Les prix des carburants sont indexés sur les cours internationaux du pétrole et peuvent être ajustés périodiquement selon les directives des autorités de régulation. Consultez notre widget de prix en temps réel sur la page d'accueil pour les tarifs actualisés.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item" data-category="paiement">
+                        <div class="faq-question">
+                            <span>Proposez-vous des remises pour les gros volumes ?</span>
+                            <i class="fa-solid fa-chevron-down faq-chevron"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Oui, nous proposons des tarifs préférentiels pour les commandes en gros volume (entreprises, flottes de véhicules, industries). Contactez notre service commercial pour obtenir un devis personnalisé adapté à vos besoins.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item" data-category="paiement">
+                        <div class="faq-question">
+                            <span>Puis-je payer en plusieurs fois ?</span>
+                            <i class="fa-solid fa-chevron-down faq-chevron"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Pour les clients professionnels avec un contrat établi, nous pouvons étudier des modalités de paiement échelonné. Contactez notre service client pour discuter de vos besoins spécifiques et établir un accord commercial.</p>
+                        </div>
+                    </div>
+
+                    <h2>Programme de Fidélité</h2>
+
+                    <div class="faq-item" data-category="fidelite">
+                        <div class="faq-question">
+                            <span>Comment fonctionne la carte de fidélité SIP ?</span>
+                            <i class="fa-solid fa-chevron-down faq-chevron"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Notre carte de fidélité SIP vous permet de cumuler des points à chaque achat dans nos stations. Ces points sont convertibles en réductions, services gratuits ou cadeaux. La carte est gratuite et disponible dans toutes nos stations sur simple demande.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item" data-category="fidelite">
+                        <div class="faq-question">
+                            <span>Quels sont les avantages du programme fidélité ?</span>
+                            <i class="fa-solid fa-chevron-down faq-chevron"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Les avantages incluent : réductions sur les carburants et services, accès prioritaire aux promotions, invitations aux événements VIP, service de dépannage gratuit (selon le niveau de fidélité), et bien plus encore. Plus vous utilisez votre carte, plus vous bénéficiez d'avantages !</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-contact">
+                    <h3>Vous ne trouvez pas votre réponse ?</h3>
+                    <p>Notre équipe est à votre disposition pour répondre à toutes vos questions.</p>
+                    <a href="contact.html" class="btn btn-primary">Contactez-nous</a>
+                    <a href="devis.html" class="btn btn-secondary">Demander un devis</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section footer-brand-col">
+                <h3>SIP - Société Ivoirienne de Pétrole</h3>
+                <a href="../index.html" class="footer-logo-link" >
+                        <img src="../assets/images/LOGOSIP2.png" alt="Logo SIP">
+                    </a>
+                <p>L'énergie au coeur de la route</p>
+                    <!-- Réseaux sociaux (Suivez-nous)
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+                        <a href="#" aria-label="LinkedIn"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+                        <a href="#" aria-label="Twitter"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/></svg></a>
+                    </div>
+                    -->
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <p><strong>Téléphone:</strong> 2721375468</p>
+                    <p><strong>Email:</strong> commercial@sip-ci.com</p>
+                    <p><strong>Adresse:</strong> Treichville, Boulevard Félix Houphouët Boigny, Immeuble La Balance</p>
+                    <p><strong>BP:</strong> 26 BP 819 Abidjan 26</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Liens utiles</h3>
+                    <ul>
+                        <li><a href="../index.html">Accueil</a></li>
+                        <li><a href="apropos.html">À propos</a></li>
+                        <li><a href="actualites.html">Actualités</a></li>
+                        <li><a href="devis.html">Demande de devis</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Stations-services</h3>
+                    <ul>
+                        <li><a href="stations.html">Trouver une station-service</a></li>
+                        <li><a href="rse.html">Nos engagements</a></li>
+                        <li><a href="produits-services.html#services-annexes">Prendre soin de votre voiture</a></li>
+                        <li><a href="contact.html?sujet=franchise">Devenir franchisé</a></li>
+                        <li><a href="recrutement.html">Rejoindre l'équipe SIP</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Société Ivoirienne de Pétrole.</p>
+            </div>
+        </div>
+    </footer>
+
+    
+    <!-- Bouton Flottant Devis Mobile -->
+    <a href="devis.html" class="floating-devis-btn">Demander un Devis</a>
+    
+    
+    
+    <!-- Bandeau Cookies RGPD -->
+    <div class="cookies-banner">
+        <p>Nous utilisons des cookies pour améliorer votre expérience. En continuant à naviguer, vous acceptez notre <a href="confidentialite.html">politique de confidentialité</a>.</p>
+        <div class="cookies-buttons">
+            <button class="cookies-btn cookies-btn-accept">Accepter</button>
+            <button class="cookies-btn cookies-btn-reject">Refuser</button>
+        </div>
+    </div>
+
+    <script src="../assets/js/script.js"></script>
+    <script src="../assets/js/widget.js"></script>
+    <script>
+        // Filtrage des FAQ par catégorie
+        document.querySelectorAll('.faq-category-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                // Mise à jour des boutons actifs
+                document.querySelectorAll('.faq-category-btn').forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+                
+                const category = this.dataset.category;
+                const items = document.querySelectorAll('.faq-item');
+                
+                items.forEach(item => {
+                    if (category === 'all' || item.dataset.category === category) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+        
+        // Recherche dans la FAQ
+        function searchFAQ() {
+            const searchTerm = document.getElementById('faq-search').value.toLowerCase();
+            const items = document.querySelectorAll('.faq-item');
+            
+            items.forEach(item => {
+                const question = item.querySelector('.faq-question').textContent.toLowerCase();
+                const answer = item.querySelector('.faq-answer').textContent.toLowerCase();
+                
+                if (question.includes(searchTerm) || answer.includes(searchTerm)) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+        
+        // Recherche en temps réel
+        document.getElementById('faq-search').addEventListener('input', searchFAQ);
+    </script>
+
+    <!-- Menu Mobile HTML -->
+    <div class="mobile-menu">
+        <a href="../index.html">Accueil</a>
+        <a href="apropos.html">À Propos</a>
+        <a href="produits-services.html">Produits & Services</a>
+        <a href="stations.html">Stations</a>
+        <a href="actualites.html">Actualités</a>
+        <a href="recrutement.html">Recrutement</a>
+        <a href="contact.html">Contact</a>
+        <a href="https://fidelity.sip-ci.net/" class="mobile-menu-espace-client" target="_blank" rel="noopener noreferrer">Espace client</a>
+    </div>
+</body>
+</html>

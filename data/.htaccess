@@ -1,0 +1,13 @@
+# Lecture publique des données JSON pour fetch() depuis les pages du site.
+# Si les stations ne s’affichent pas en production alors qu’elles marchent en local,
+# vérifiez aussi que ce dossier et stations.json sont bien déployés (sensible à la casse sous Linux).
+
+<IfModule mod_authz_core.c>
+    Require all granted
+</IfModule>
+
+<IfModule mod_headers.c>
+    <FilesMatch "\.(json)$">
+        Header set Content-Type "application/json; charset=UTF-8"
+    </FilesMatch>
+</IfModule>
