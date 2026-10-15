@@ -60,6 +60,11 @@
 /* ============================================
    BODY & GLOBAL RESET
    ============================================ */
+html {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
 body {
     font-family: var(--sip-font);
     background: var(--sip-white);
@@ -68,6 +73,9 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
+    max-width: 100%;
+    overflow-x: hidden;
+    position: relative;
 }
 
 /* ============================================
@@ -80,13 +88,18 @@ header {
     position: fixed !important;
     top: 0 !important;
     left: 0 !important;
+    right: 0 !important;
     width: 100% !important;
+    max-width: 100vw !important;
+    box-sizing: border-box !important;
     z-index: 1000 !important;
     transition: box-shadow var(--sip-transition) !important;
 }
 
 nav {
     max-width: 1280px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
     padding: 0 2.5rem !important;
     min-height: 76px !important;
     display: flex !important;
@@ -202,8 +215,36 @@ nav {
     color: var(--sip-white) !important;
 }
 
+.mobile-menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 44px !important;
+    height: 44px !important;
+    background: transparent !important;
+    border: none !important;
+    border-radius: var(--sip-radius-sm) !important;
+    cursor: pointer !important;
+    z-index: 1001 !important;
+    padding: 6px !important;
+    flex-shrink: 0 !important;
+    transition: background var(--sip-transition) !important;
+}
+
 .mobile-menu-toggle span {
+    display: block !important;
+    width: 26px !important;
+    height: 3px !important;
     background: var(--sip-navy) !important;
+    margin: 2.5px 0 !important;
+    border-radius: 3px !important;
+    transition: 0.3s ease !important;
+}
+
+.mobile-menu-toggle:hover,
+.mobile-menu-toggle:active {
+    background: rgba(7, 16, 30, 0.06) !important;
 }
 
 /* ============================================
@@ -2416,7 +2457,21 @@ footer a img[src*="LOGOSIP"]:hover,
 
 @media (max-width: 768px) {
     nav {
-        padding: 0 1.2rem !important;
+        padding: 0 1.25rem !important;
+        min-height: 68px !important;
+        position: relative !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    .social-icons-header {
+        display: none !important;
+    }
+
+    .mobile-menu-toggle {
+        display: flex !important;
+        margin-left: auto !important;
+        flex-shrink: 0 !important;
     }
 
     main>.page-header,
@@ -2443,9 +2498,22 @@ footer a img[src*="LOGOSIP"]:hover,
         font-size: 2rem;
     }
 
+    /* Section À Propos / Notre Histoire — Centrage complet (Titre, Paragraphes, Stats) */
     .about-grid {
         grid-template-columns: 1fr !important;
-        gap: 2.5rem !important;
+        gap: 2.2rem !important;
+    }
+
+    .about-image {
+        margin: 0 auto !important;
+        max-width: 100% !important;
+    }
+
+    .about-image img {
+        height: 280px !important;
+        max-width: 100% !important;
+        object-fit: cover !important;
+        border-radius: var(--sip-radius-md) !important;
     }
 
     .about-image::before,
@@ -2453,11 +2521,55 @@ footer a img[src*="LOGOSIP"]:hover,
         display: none !important;
     }
 
-    .about-stats {
-        gap: 1.5rem !important;
-        flex-wrap: wrap !important;
+    .about-content {
+        text-align: center !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
     }
 
+    .about-content h2 {
+        text-align: center !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        font-size: clamp(1.8rem, 5.5vw, 2.2rem) !important;
+    }
+
+    .about-lead,
+    .about-content p {
+        text-align: center !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        max-width: 640px !important;
+        line-height: 1.65 !important;
+    }
+
+    .about-stats {
+        gap: 1.2rem !important;
+        grid-template-columns: repeat(3, 1fr) !important;
+        justify-content: center !important;
+        margin: 1.8rem auto !important;
+        width: 100% !important;
+        max-width: 520px !important;
+        box-sizing: border-box !important;
+    }
+
+    .about-stats .stat-item,
+    .about-stats .stat-card {
+        text-align: center !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+
+    /* Grilles et Cartes */
     .services-grid,
     .news-grid,
     .stations-grid,
@@ -2466,6 +2578,53 @@ footer a img[src*="LOGOSIP"]:hover,
     .card-grid-4,
     .contact-grid {
         grid-template-columns: 1fr !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    .station-card,
+    .service-card,
+    .news-card {
+        min-width: 0 !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    /* Boutons et CTA responsive — Centrage et prévention débordement */
+    .btn,
+    .btn-primary,
+    .btn-secondary,
+    .btn-outline,
+    .btn-outline-red,
+    .btn-sip-primary {
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+        white-space: normal !important;
+        text-align: center !important;
+        word-break: break-word !important;
+    }
+
+    .btn-lg {
+        padding: 0.95rem 1.6rem !important;
+        font-size: clamp(0.82rem, 3.8vw, 0.92rem) !important;
+        width: auto !important;
+        max-width: 100% !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        display: inline-flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+    }
+
+    .stations-cta-wrap,
+    .section .text-center {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
     }
 
     .footer-content {
@@ -3401,5 +3560,78 @@ html, body {
 
     .faq-answer {
         font-size: 0.88rem !important;
+    }
+}
+
+/* ============================================
+   CORRECTIONS FINALES RESPONSIVE — MOBILE UX
+   1. Centrage bouton CTA
+   2. Visibilité & contraste Menu Berger
+   3. Centrage bloc Notre Histoire & description
+   ============================================ */
+@media (max-width: 768px) {
+    .text-center-mobile {
+        text-align: center !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+
+    .text-center-mobile h2,
+    .text-center-mobile h3,
+    .text-center-mobile p,
+    .text-center-mobile .about-lead {
+        text-align: center !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
+    /* Sécurité Menu Burger */
+    .mobile-menu-toggle {
+        display: flex !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        margin-left: auto !important;
+        flex-shrink: 0 !important;
+        width: 44px !important;
+        height: 44px !important;
+        padding: 6px !important;
+        position: relative !important;
+        z-index: 1002 !important;
+    }
+
+    .mobile-menu-toggle span {
+        display: block !important;
+        width: 26px !important;
+        height: 3px !important;
+        background: #07101E !important;
+        margin: 2.5px 0 !important;
+        border-radius: 3px !important;
+    }
+
+    /* Bouton Trouver une station */
+    .stations-cta-wrap {
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        width: 100% !important;
+        margin: 2.5rem auto 0 !important;
+        padding: 0 1rem !important;
+        box-sizing: border-box !important;
+    }
+
+    .stations-cta-wrap .btn,
+    .stations-cta-wrap .btn-lg {
+        width: 100% !important;
+        max-width: 360px !important;
+        margin: 0 auto !important;
+        text-align: center !important;
+        display: inline-flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        box-sizing: border-box !important;
+        white-space: normal !important;
+        padding: 1rem 1.4rem !important;
+        font-size: 0.88rem !important;
+        line-height: 1.35 !important;
     }
 }
